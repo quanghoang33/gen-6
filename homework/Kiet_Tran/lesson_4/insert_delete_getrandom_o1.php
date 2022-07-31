@@ -6,11 +6,13 @@
 class RandomizedSet {
 
     private $set;
+    private $has;
 
     /**
      */
     function __construct() {
         $this->set = [];
+        $this->hash = [];
     }
   
     /**
@@ -23,6 +25,7 @@ class RandomizedSet {
         }
 
         array_push($this->set, $val);
+        $this->hash[$val] = count($this->set) - 1;
         return true;
     }
   
@@ -35,8 +38,13 @@ class RandomizedSet {
             return false;
         }
 
-        $key = array_search($val, $this->set);
-        unset($this->set[$key]);
+        $n = count($this->set);
+        $targetKey = $this->hash[$val];
+        $lastElement = $this->set[$n - 1];
+        $this->set[$n - 1] = $val;
+        $this->set[$targetKey] = $lastElement;
+        array_pop($this->set);
+        unset($this->hash[$val]);
         return true;
     }
   

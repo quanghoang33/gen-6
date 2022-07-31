@@ -21,7 +21,7 @@ class Solution {
         $n = count($nums);
         for ($i = 0; $i < $n; $i++) {
             $cumSum += $nums[$i];
-            $mod[(($cumSum % $k) + $k) % $k] = $mod[(($cumSum % $k) + $k) % $k] + 1;
+            $mod[(($cumSum % $k) + $k) % $k] += 1;
         }
 
         $result = 0;
