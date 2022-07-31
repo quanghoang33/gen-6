@@ -6,7 +6,7 @@
 class RandomizedSet {
 
     private $set;
-    private $has;
+    private $hash;
 
     /**
      */
