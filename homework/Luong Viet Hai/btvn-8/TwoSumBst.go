@@ -4,7 +4,7 @@ func twoSumBSTs(root1 *TreeNode, root2 *TreeNode, target int) bool {
 	return dps(root1, root2, target)
 }
 
-func dps(root1 *TreeNode, root2 *TreeNode, target int) bool {
+func dfs(root1 *TreeNode, root2 *TreeNode, target int) bool {
 	if root1 == nil {
 		return false
 	}
