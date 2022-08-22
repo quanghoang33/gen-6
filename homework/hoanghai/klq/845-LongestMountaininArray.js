@@ -10,7 +10,7 @@
 // [1,1,0,0,1,0]
 // [40,51,29,19,50,25]
 // [0,0,1,0,0,1,1,1,1,1]
-// Complex thing in this problem is you have to cover all of this upper test case, some test contain 2 number next to each other equal, or all the arr pass
+// Complex thing in this problem is you have to cover all of this upper test case, some test contain 2 number next to each other equal, or all the array pass
 // becarefull with your condition, >=, <=, <, >
 var longestMountain = function(arr) {
     let res = 0;
