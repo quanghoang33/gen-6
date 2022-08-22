@@ -1,10 +1,10 @@
 package b8
 
 func twoSumBSTs(root1 *TreeNode, root2 *TreeNode, target int) bool {
-	return dps(root1, root2, target)
+	return dfs(root1, root2, target)
 }
 
-func dps(root1 *TreeNode, root2 *TreeNode, target int) bool {
+func dfs(root1 *TreeNode, root2 *TreeNode, target int) bool {
 	if root1 == nil {
 		return false
 	}
@@ -17,8 +17,8 @@ func dps(root1 *TreeNode, root2 *TreeNode, target int) bool {
 	}
 
 	if root1.Val+root2.Val < target {
-		return dps(root1.Right, root2, target) || dps(root1, root2.Right, target)
+		return dfs(root1.Right, root2, target) || dfs(root1, root2.Right, target)
 	} else {
-		return dps(root1.Left, root2, target) || dps(root1, root2.Left, target)
+		return dfs(root1.Left, root2, target) || dfs(root1, root2.Left, target)
 	}
 }
