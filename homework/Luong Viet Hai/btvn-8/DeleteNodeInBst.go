@@ -6,34 +6,24 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 	}
 
 	if root.Val < key {
-		deleteNode(root.Right, key)
+		root.Right = deleteNode(root.Right, key)
 
 	}
 
 	if root.Val > key {
-		deleteNode(root.Left, key)
+		root.Left = deleteNode(root.Left, key)
 	}
 
 	if root.Val == key {
-		if root.Left == nil && root.Right == nil {
-			root = nil
-			return nil
-		}
-		if root.Left != nil {
-			leafLeftNode := getMaxTree(root.Left)
-			temp := leafLeftNode
-			root = nil
-			root = temp
-			return root
+		if root.Left == nil {
+			return root.Right
+		} else if root.Right == nil {
+			return root.Left
 		}
 
-		if root.Right != nil {
-			leafRightNode := getMinTree(root.Right)
-			temp := leafRightNode
-			root = nil
-			root = temp
-			return root
-		}
+		newRoot := getMaxTree(root.Left)
+		newRoot.Right = root.Right
+		root = root.Left
 	}
 	return root
 }
@@ -41,14 +31,6 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 func getMaxTree(root *TreeNode) *TreeNode {
 	if root.Right != nil {
 		return getMaxTree(root.Right)
-	} else {
-		return root
-	}
-}
-
-func getMinTree(root *TreeNode) *TreeNode {
-	if root.Left != nil {
-		return getMinTree(root.Left)
 	} else {
 		return root
 	}
