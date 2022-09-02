@@ -209,9 +209,9 @@ person.name = "Lydia";
 person.name;
 ```
 
-- `A: Added a new property!` => **Answer**
+- A: Added a new property!
 - B: Accessed a property!
-- C: Added a new property! Accessed a property!
+- `C: Added a new property! Accessed a property!` => **Answer**
 - D: Nothing gets logged
 
 **Question 8: Which of the following will modify the person object?**
