@@ -16,9 +16,9 @@ Ví dụ trang **http://example.com/index.html** sẽ có chung origin với:
 - **http://example.com/profile.html**
 - **http://example.com:80/profile.html**    
 và khác origin với: 
-- **https**://example.com/index.html
-http://example.com:**81**/index.html
-http://**blog**.example.com/index.html     
+- **https**://example.com/index.html    
+http://example.com:**81**/index.html    
+http://**blog**.example.com/index.html         
 
 ## Same Origin Policy
 Cơ chế trong trình duyệt nhằm ngăn cản 1 trang html tương tác tới 1 sever không cùng nguồn với html đó.    
