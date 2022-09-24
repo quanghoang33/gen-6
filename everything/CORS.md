@@ -27,26 +27,9 @@ Việc này để tránh hiện tượng  [XSS](https://owasp.org/www-community/
 
 ## CORS là gì?    
 CORS là cơ chế sever dùng để cho phép một hay nhiều domain không cùng origin gửi request đến và truy cập lấy response từ sever.    
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Source: 
 - https://viblo.asia/p/tim-hieu-ve-cross-origin-resource-sharing-cors-Az45bGWqKxY
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+- https://www.stackhawk.com/blog/django-cors-guide/
