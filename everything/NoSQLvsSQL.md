@@ -1,0 +1,1 @@
+https://www.ibm.com/cloud/blog/sql-vs-nosql
